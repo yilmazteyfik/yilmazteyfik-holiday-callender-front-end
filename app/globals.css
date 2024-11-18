@@ -1,0 +1,167 @@
+/* globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global styles */
+html, body {
+  font-family: 'Inter', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin-top: 15px;
+  background-color: #FBF9F4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 80px; /* Ensure space for the navbar */
+}
+
+/* Navbar styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #2C3E50;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 80px;
+  transition: top 0.3s ease; /* Smooth transition for hiding */
+}
+
+.navbar-title {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar-link {
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+  padding: 5px 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #1abc9c;
+  transform: translateY(-2px);
+}
+
+/* Calendar container styles */
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Day block styling */
+.day {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.day:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/* Blank day styling */
+.day.blank {
+  visibility: hidden;
+}
+
+/* Holiday styling */
+.day.holiday {
+  background-color: #FDECEF;
+}
+
+/* Month Navigation buttons */
+.month-navigation button {
+  padding: 12px;
+  background-color: #3498db;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.month-navigation button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Filters */
+.filters select {
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  transition: border 0.3s ease;
+}
+
+.filters select:hover {
+  border-color: #3498db;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+/* Small month in yearly view */
+.yearly-month {
+  padding: 12px;
+  border-radius: 12px;
+  background-color: #FFF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.yearly-month:hover {
+  transform: scale(1.05);
+  background-color: #FBF9F4;
+}
+
+/* Yearly grid */
+.yearly-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* General day hover effect */
+.day:hover {
+  transform: scale(1.1);
+  background-color: #eaf5fb;
+}
